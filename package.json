@@ -1,0 +1,22 @@
+{
+  "name": "exercise-13.4",
+  "version": "1.0.0",
+  "description": "format czasu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SliwK/Exercise-13.4.git"
+  },
+  "author": "Krzysztof Śliwiński",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SliwK/Exercise-13.4/issues"
+  },
+  "homepage": "https://github.com/SliwK/Exercise-13.4#readme",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
+}

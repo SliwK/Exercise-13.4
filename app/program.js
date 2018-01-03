@@ -2,12 +2,12 @@ var os = require('os');
 
 //odniesienie do nowego modułu
 var OSinfo = require('../modules/OSinfo');
-//var TimeConverter = require('../modules/TimeConverter');
+var instructionTime = require('../modules/instructionTime');
 
 process.stdin.setEncoding('utf-8');
 process.stdin.on('readable', function() {
     var input = process.stdin.read();
-    if(input !== null && input !== isNaN(input)) {
+    if(input !== null) {
         var instruction = input.trim();
         switch(instruction) {
             case '/exit':
@@ -20,13 +20,11 @@ process.stdin.on('readable', function() {
             case '/getOSinfo':
                 OSinfo.print();
                 break;
+            case '/format':
+                instructionTime.time();
+                break;
             default:
                 process.stderr.write('Wrong instruction!\n');
         }
     }
-/*    else {
-      TimeConverter.time();
-    } */
 });
-
-//exports.program = input;
