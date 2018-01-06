@@ -5,7 +5,7 @@ var sec = 0;
 var min = 0;
 var hour = 0;
 
-function upTime() {
+function getUpTime() {
 
         if(uptime < 60) {
             sec = (uptime % 60).toFlat();
@@ -20,4 +20,4 @@ function upTime() {
          return [uptime, hour, min, sec];
 }
 
-exports.time = upTime;
+exports.systemUpTime = getUpTime;

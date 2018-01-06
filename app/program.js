@@ -3,6 +3,7 @@ require('colors');
 //odniesienie do nowego modułu
 var OSinfo = require('../modules/OSinfo');
 var instructionTime = require('../modules/instructionTime');
+var timeFormater = require('../modules/timeFormater');
 
 process.stdin.setEncoding('utf-8');
 process.stdin.on('readable', function instruction() {
@@ -17,7 +18,8 @@ process.stdin.on('readable', function instruction() {
               } else if (instruction === '/getOSinfo') {
                   OSinfo.print();
               } else if (instruction != null && instruction.match('/format')) {
-                    instructionTime.time(instruction);
+                    instructionTime.convertedTime(instruction);
+                    var instTime = timeFormater.timeFormat(); //tu zwracam z opis dla Uptime ... a chciałbym dla instructionTime :(
               } else {
                   process.stderr.write('Wrong instruction!\n');
           }

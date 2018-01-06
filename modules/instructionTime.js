@@ -1,17 +1,16 @@
 var program = require('../app/program');
 
-function timeConvert(instruction) {
 
-//console.log(instruction);
+function getConvertedTime(instruction) {
 
 var number = instruction.slice(7);
 
 console.log(number +' sec');
-//console.log(isNaN(number));
 
         var sec = 0;
         var min = 0;
         var hour = 0;
+        var uptime = 0;
 
     if(number !== null && isNaN(number)) {
       process.stdout.write("It is not a number - try again! \n");
@@ -31,6 +30,10 @@ console.log(number +' sec');
 
          }
     }
+
+    return [uptime, hour, min, sec];
+
 }
 
-exports.time = timeConvert;
+
+exports.convertedTime = getConvertedTime;
