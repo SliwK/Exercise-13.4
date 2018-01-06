@@ -1,19 +1,27 @@
 var program = require('../app/program');
 
-function timeConvert() {
 
-//    console.log("Enter number you want to convert:");
 
-          var number = process.stdin.read();  //jak do tego dodać część insrukcji /format 12345 skoro wszystko co jest różne od /format to błąd??
-                                              //a jeśli nie da sie tak to jak odpalic kolejny proces z nasłuchiwaniem żeby działał tylko dla tego modułu?
-//        console.log(number);
+
+
+function timeConvert(instruction) {
+//var number = program.number;
+//var args = process.argv;
+//console.log(args);
+
+console.log(instruction);
+
+var number = instruction.slice(7);
+
+console.log(number +' sec');
+//console.log(isNaN(number));
 
         var sec = 0;
         var min = 0;
         var hour = 0;
 
-    if(number !== null && number == isNaN) {
-      process.stdout.write("It is not a number - try again!");
+    if(number !== null && isNaN(number)) {
+      process.stdout.write("It is not a number - try again! \n");
     }   else {
         if(number < 60) {
             sec = number % 60;
