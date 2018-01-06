@@ -1,15 +1,8 @@
 var program = require('../app/program');
 
-
-
-
-
 function timeConvert(instruction) {
-//var number = program.number;
-//var args = process.argv;
-//console.log(args);
 
-console.log(instruction);
+//console.log(instruction);
 
 var number = instruction.slice(7);
 

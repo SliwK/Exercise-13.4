@@ -23,6 +23,3 @@ process.stdin.on('readable', function instruction() {
           }
       }
   });
-
-
-//exports.number = this.instruction;
