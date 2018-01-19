@@ -59,3 +59,6 @@ typings/
 
 # sass cache dictionaries
 .sass-cache/
+
+# Folders
+OLD.FILES/

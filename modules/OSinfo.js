@@ -1,6 +1,6 @@
 var os = require('os');
 
-var timeFormater = require('../modules/timeFormater');
+var UpTime = require('../modules/UpTime');
 
 function getOSinfo() {
   var type = os.type();
@@ -16,7 +16,7 @@ function getOSinfo() {
   var cpu = os.cpus()[0].model;
   console.log('CPU model:', cpu);
 
-  var uptime = timeFormater.timeFormat();
+  var uptime = UpTime.upTime();
 
   var userInfo = os.userInfo();
   console.log('User name:', userInfo.username);
